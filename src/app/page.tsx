@@ -35,7 +35,7 @@ if(place && place.length>0){
   }
   useEffect(()=>{
     getData();
-  },[])
+  })
   return (
     <div className={styles.outerdiv} >
       <div className={styles.searchbar}>
@@ -58,7 +58,7 @@ if(place && place.length>0){
            {
           placeData.weather[0].main==="Clear"&& <WbSunnyIcon  className={styles.weathericon} />
            }  
-      <p className={styles.temp}>{(placeData?.main.temp-273.15).toFixed(1)}<span>'C</span></p> 
+      <p className={styles.temp}>{(placeData?.main.temp-273.15).toFixed(1)}<span>C</span></p> 
       </div>
       <div className={styles.section11}>
 <p className={styles.city}>{placeData?.name}</p>
@@ -74,16 +74,16 @@ if(place && place.length>0){
     placeData && <div className={styles.section2}>
   <div className={styles.section21}>
 <p className={styles.head1}>Temprature</p>
-<p className={styles.head2}>{(placeData?.main.temp-273.15).toFixed(1)}<span>'C</span></p> 
+<p className={styles.head2}>{(placeData?.main.temp-273.15).toFixed(1)}<span>C</span></p> 
   </div> 
   <div className={styles.section21}>
 <p className={styles.head1}>Temprature Min</p>
-<p className={styles.head2}>{(placeData?.main.temp_min-273.15).toFixed(1)}<span>'C</span></p> 
+<p className={styles.head2}>{(placeData?.main.temp_min-273.15).toFixed(1)}<span>C</span></p> 
   </div> 
 
   <div className={styles.section21}>
 <p className={styles.head1}>Temprature Max</p>
-<p className={styles.head2}>{(placeData?.main.temp_max-273.15).toFixed(1)}<span>'C</span></p> 
+<p className={styles.head2}>{(placeData?.main.temp_max-273.15).toFixed(1)}<span>C</span></p> 
   </div> 
   <div className={styles.section21}>
 <p className={styles.head1}>Humidity</p>
